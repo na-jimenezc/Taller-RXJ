@@ -4,9 +4,5 @@ import { App } from './app/app';
 import { appConfig } from './app/app.config';
 
 bootstrapApplication(App, {
-  ...appConfig,
-  providers: [
-    ...(appConfig.providers || []),
-    provideHttpClient() 
-  ]
+  ...appConfig
 }).catch(err => console.error(err));
